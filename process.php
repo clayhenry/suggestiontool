@@ -5,8 +5,8 @@ $callurl = "https://api.ritekit.com/v1/stats/auto-hashtag";
 
 
 $lead_data["url"] = $_POST['url'];
-$lead_data["post"] = $_POST['post'] ?? "";
-$lead_data["tags"] = $_POST['tags'] ?? "";
+$lead_data["post"] = isset($_POST['post']) ? $_POST['post'] : "";
+$lead_data["tags"] = isset($_POST['tags']) ? $_POST['tags'] : "";
 $lead_data["client_id"] = "c4e432c37799f525e8f55d5f31337cc4f3845c508d55";
 $url = $lead_data["url"] ."?". http_build_query($lead_data);
 
