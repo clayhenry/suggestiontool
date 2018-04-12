@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -11,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <body>
 <style>
@@ -20,24 +22,30 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+h1 {
+
+    font-family: 'Rajdhani', sans-serif;
+    color: #205ea0
+}
+
 textarea {
     width:90%;
     height:100px;
 }
-    .good{
+    .good h3{
             color: green;
     }
 
-    .unused {
+    .unused h3 {
 
         color: gray;
     }
 
-    .great {
+    .great h3{
         color: yellow;
 
     }
-    .overused {
+    .overused h3{
 
         color: darkred;
     }
@@ -54,27 +62,23 @@ textarea {
 
 </style>
 <div class="container">
-
+    <div style="text-align: center; padding: 20px;">
+        <h1>#Hashtag My Post</h1>
+    </div>
     <div class=form-group>
-        <textarea id="field" class="form-control"></textarea>
+        <textarea id="field" class="form-control" placeholder="Your Post here..." ></textarea>
     </div>
     <div class=form-group style="text-align:center">
-        <input type="submit" id="submit" class="btn btn-primary" value="Generate Post with Hastags" onclick="submit()" />
+        <input type="submit" id="submit" class="btn btn-primary" value="Generate You Post With Hashtags" onclick="submit()" />
     </div>
 
 
-<div id="spinner" style=" display: none;">
-    <img src="animated-loader-gif.gif">
 
-</div>
 
-<div id ="results" class="alert alert-primary" style="font-size:21px; text-align:center">Is #ArtificialIntelligence the future of #CustomerService?</div>
+<div id ="results" class="alert alert-primary" style="font-size:21px; text-align:center">I can't <strong>#change</strong> the direction of the <strong>#wind</strong>, but I can adjust my sails to always reach my destination.</div>
 <div id ="suggestions"></div>
 <div id="stats">
-    <ul class="list-group">
-        <li class=" list-group-item good "><h3>#artificialintelligence</h3> <strong>Exposure:</strong> <span class="badge badge-info">200279</span>  Images: 0.1012658 Links: 0.1012658 Mentions: 0.4177215 Retweets: 125 Tweets: 79</li>
-        <li class=" list-group-item overused "><h3>#customerservice</h3> <strong>Exposure:</strong>: 66088 Images: 0.0434783 Links: 0.0434783 Mentions: 0 Retweets: 12 Tweets: 92</li>
-    </ul>
+    <ul class="list-group" style="/* text-align: center */"><li class=" list-group-item good "><h3>#thankyou</h3> <strong>Exposure: </strong>  <span class="badge badge-info">120562</span> <strong>Images: </strong> <span class="badge badge-info">0.2151899</span> <strong>Links: </strong> <span class="badge badge-info">0.2151899</span> <strong>Mentions: </strong> <span class="badge badge-info">0.4810127</span> <strong>Retweets: </strong> <span class="badge badge-info">79</span> <strong>Tweets: </strong> <span class="badge badge-info">79</span></li><li class=" list-group-item good "><h3>#change</h3> <strong>Exposure: </strong>  <span class="badge badge-info">166467</span> <strong>Images: </strong> <span class="badge badge-info">0.137931</span> <strong>Links: </strong> <span class="badge badge-info">0.137931</span> <strong>Mentions: </strong> <span class="badge badge-info">0.0689655</span> <strong>Retweets: </strong> <span class="badge badge-info">4</span> <strong>Tweets: </strong> <span class="badge badge-info">58</span></li></ul>
 
 </div>
 
@@ -93,12 +97,12 @@ var hastags = "";
 
 function callApi(tags = ""){
 
-    spinner.setAttribute("style", "display:block; position:absolute; width:100%; text-align: center; top:20%; z-index:999");
+  //  spinner.setAttribute("style", "display:block");
 
     var url =  ( recurCount == 0 ) ? "https://api.ritekit.com/v1/stats/auto-hashtag" : "https://api.ritekit.com/v1/stats/multiple-hashtags";
 
     $.ajax({
-        url: "http://localhost.test/suggestion/process.php",
+        url: "http://localhost/hashiffy/process.php",
         data: {
             post: field.value,
             tags: tags,
@@ -141,7 +145,7 @@ function callApi(tags = ""){
                            + "<h3>#" + result.stats[j].hashtag + "</h3>"
                            + " <strong>Exposure: </strong> " + span + result.stats[j].exposure + "</span>"
                            + " <strong>Images: </strong>" + span + result.stats[j].images  + "</span>"
-                           + " <strong>Links: </strong>" + span + result.stats[j].links + "</span><br />"
+                           + " <strong>Links: </strong>" + span + result.stats[j].links + "</span>"
                            + " <strong>Mentions: </strong>" + span + result.stats[j].mentions  + "</span>"
                            + " <strong>Retweets: </strong>" + span + result.stats[j].retweets + "</span>"
                            + " <strong>Tweets: </strong>" + span + result.stats[j].tweets+ "</span>"
@@ -153,7 +157,6 @@ function callApi(tags = ""){
                stats += "</ul>"
 
                 statsdiv.innerHTML = stats;
-                spinner.style.display = "none";
 
             }
 
@@ -189,6 +192,14 @@ function callApi(tags = ""){
 
     function submit() {
 
+    var spinner = "<div id=\"spinner\" style=\"text-align: center;\">\n" +
+        "    <img src=\"animated-loader-gif.gif\"  style=\"width:100px; height:100px;\">\n" +
+        "    <span style=\"font-weight: bold; color:#007bff\">Generating your hashtag post with some cool additional info ...</span>\n" +
+        "\n" +
+        "</div>";
+
+        resultsdiv.innerHTML = spinner;
+        statsdiv.innerHTML = "";
           callApi();
   
   
