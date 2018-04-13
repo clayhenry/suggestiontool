@@ -1,8 +1,6 @@
 <?php
 if(!empty($_POST)){
 
-$callurl = "https://api.ritekit.com/v1/stats/auto-hashtag";
-
 
 $lead_data["url"] = $_POST['url'];
 $lead_data["post"] = isset($_POST['post']) ? $_POST['post'] : "";

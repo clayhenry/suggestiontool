@@ -123,6 +123,7 @@ ul.list-group li {padding: 30px 50px;}
 
 <div id ="results" class="alert alert-primary" style="font-size:21px; text-align:center">I can't <strong>#change</strong> the direction of the <strong>#wind</strong>, but I can adjust my sails to always reach my destination.</div>
 
+
     <div style="float: right">
     <input type="submit" id="cluipboard" class="btn btn-light" value="Copy To Clipboard" onclick="copyToClipboard()" />
     </div>
@@ -164,8 +165,9 @@ ul.list-group li {padding: 30px 50px;}
     var resultsdiv = document.getElementById("results");
     var statsdiv = document.getElementById("stats");
     var hiddentext = document.getElementById("hiddentext");
+    var loading = document.getElementById("loading");
 
-var recurCount = 0;
+var    recurCount = 0;
 var hastags = "";
 
 
@@ -175,8 +177,11 @@ function callApi(tags = ""){
 
     var url =  ( recurCount == 0 ) ? "https://api.ritekit.com/v1/stats/auto-hashtag" : "https://api.ritekit.com/v1/stats/multiple-hashtags";
 
+    console.log(url);
+    console.log(recurCount);
+
     $.ajax({
-        url: "process.php",
+        url: "/suggestion/process.php",
         data: {
             post: field.value,
             tags: tags,
@@ -211,8 +216,6 @@ function callApi(tags = ""){
  
                    }
 
-                   console.log(calss);
-
                    var span = " <span class='badge badge-info'>";
                    if(result.stats[j].hashtag ){
                        stats +=  "<li class="  + "'" + calss + "'" + " >"
@@ -229,18 +232,17 @@ function callApi(tags = ""){
                    }
                }
                stats += "</ul>"
-
+                hastags = "";
                 statsdiv.innerHTML = stats;
 
-            }
+            } else {
 
-            if(recurCount == 0){
             var post = result.post;
 
             resultsdiv.innerHTML = post;
                 hiddentext.value = post;
 
-                console.log(post)
+
 
             var postTags = post.split(" ");
                 for(var i= 0; i<postTags.length; i++ ){
@@ -249,16 +251,22 @@ function callApi(tags = ""){
                             hastags +=postTags[i].replace("#", " ").replace(".", "").replace(",","") + ",";
                         }
                 }
-            recurCount ++;
+
+                recurCount++;
+
+
+            }
+            if(recurCount == 1){
+            callApi(hastags)
+                recurCount++;
+
             }
 
-              if(recurCount == 1) {
-                  callApi(hastags)
+            if(recurCount > 1){
+                recurCount= 0;
 
-                    recurCount++;
-              } 
+            }
 
-              recurCount++;
 
 
         }
@@ -275,8 +283,8 @@ function callApi(tags = ""){
         "\n" +
         "</div>";
 
-        resultsdiv.innerHTML = spinner;
-        statsdiv.innerHTML = "";
+        resultsdiv.innerHTML = spinner
+        stats.innerHTML = "Fetching..."
           callApi();
 
     }
