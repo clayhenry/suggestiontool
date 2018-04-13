@@ -64,7 +64,7 @@ textarea {
     }
 
     .great h3{
-        color: yellow;
+        color: orange;
 
     }
     .overused h3{
@@ -169,11 +169,11 @@ function callApi(tags = ""){
                    switch(result.stats[j].color){
 
                          case 0: 
-                            calss = "unused " ;
+                            calss += "unused " ;
                             break;
                         
                         case 1: 
-                            calss = "overused ";
+                            calss += "overused ";
                             break;
                         
                         case 2: 
@@ -181,7 +181,7 @@ function callApi(tags = ""){
                             break;
 
                         case 3: 
-                            calss = "great ";
+                            calss += "great ";
                             break;
  
                    }
