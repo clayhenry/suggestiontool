@@ -151,7 +151,7 @@ function callApi(tags = ""){
     var url =  ( recurCount == 0 ) ? "https://api.ritekit.com/v1/stats/auto-hashtag" : "https://api.ritekit.com/v1/stats/multiple-hashtags";
 
     $.ajax({
-        url: "http://localhost/hashiffy/process.php",
+        url: "process.php",
         data: {
             post: field.value,
             tags: tags,
