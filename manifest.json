@@ -1,0 +1,23 @@
+{
+  "short_name": "Hashtag My Post",
+  "name": "Hashtag My Post Generator",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/images/48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "assets/images/96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/images/192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html?utm_source=homescreen"
+}

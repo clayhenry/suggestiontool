@@ -18,18 +18,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <meta name="apple-mobile-web-app-title" content="Add to Home">
+    <meta name="apple-mobile-web-app-title" content="Hashtag My Post Generator">
 
-    <link rel="shortcut icon" sizes="16x16" href="assets/libraries/add-to-homescreen/imgs/icon-16x16.png">
-    <link rel="shortcut icon" sizes="192x192" href="assets/libraries/add-to-homescreen/imgs/icon-196x196.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/libraries/add-to-homescreen/imgs/icon-152x152.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" sizes="16x16" href="assets/images/16x16.png">
+    <link rel="shortcut icon" sizes="192x192" href="assets/images/192x192.png">
 
-    <script>
-        addToHomescreen()
-    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117489598-1"></script>
+
+
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -187,6 +186,8 @@ textarea {
 
     <br><br><br>
 
+
+
 <script>
     var field = document.getElementById("field");
     var resultsdiv = document.getElementById("results");
@@ -225,22 +226,22 @@ function callApi(tags = ""){
                 var calss =" list-group-item ";
                    switch(result.stats[j].color){
 
-                         case 0: 
+                         case 0:
                             calss += "unused " ;
                             break;
-                        
-                        case 1: 
+
+                        case 1:
                             calss += "overused ";
                             break;
-                        
-                        case 2: 
+
+                        case 2:
                             calss += "good ";
                             break;
 
-                        case 3: 
+                        case 3:
                             calss += "great ";
                             break;
- 
+
                    }
 
                    var span = " <span class='badge badge-info'>";
@@ -322,6 +323,20 @@ function callApi(tags = ""){
         document.execCommand("Copy");
     }
 
+
+    //sw
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
 
 </script>
 </div>

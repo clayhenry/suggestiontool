@@ -23,6 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01a819aa-eb46-4753-908d-6d85c7086195" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/manifest.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sw.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -45,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="460">
+              <caret line="330" column="83" lean-forward="true" selection-start-line="330" selection-start-column="83" selection-end-line="330" selection-end-column="83" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -69,20 +71,49 @@
                 <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1523669797537" expanded="true" signature="10730:10749" ph="..." />
-                <marker date="1523669797537" expanded="true" signature="10817:10843" ph="..." />
-                <marker date="1523669797537" expanded="true" signature="10879:10911" ph="..." />
+                <marker date="1523672332198" expanded="true" signature="10517:10536" ph="..." />
+                <marker date="1523672332198" expanded="true" signature="10604:10630" ph="..." />
+                <marker date="1523672332198" expanded="true" signature="10666:10698" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sw.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sw.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>img</find>
       <find>mobile-web-app-capable</find>
+      <find>shortcut icon</find>
+      <find>mani</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,6 +125,9 @@
         <option value="$PROJECT_DIR$/Untitled-5.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/process.php" />
+        <option value="$PROJECT_DIR$/manifest.json.js" />
+        <option value="$PROJECT_DIR$/assets/sw.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -139,87 +173,6 @@
               <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="demos" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="demos" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="detect-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="demos" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="simple" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="demos" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="stock-android" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="imgs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="addtohomescreen.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="style" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -232,6 +185,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hashiffy" />
       <recent name="C:\xampp\htdocs\hashiffy\assets\libraries" />
     </key>
   </component>
@@ -269,7 +223,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24645000" />
+    <option name="totallyTimeSpent" value="27250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1935" height="1047" extended-state="0" />
@@ -283,7 +237,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -349,9 +303,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523669797537" expanded="true" signature="10730:10749" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10817:10843" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10879:10911" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10517:10536" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10604:10630" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10666:10698" ph="..." />
           </folding>
         </state>
       </provider>
@@ -405,9 +359,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523669797537" expanded="true" signature="10730:10749" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10817:10843" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10879:10911" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10517:10536" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10604:10630" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10666:10698" ph="..." />
           </folding>
         </state>
       </provider>
@@ -443,9 +397,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523669797537" expanded="true" signature="10730:10749" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10817:10843" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10879:10911" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10517:10536" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10604:10630" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10666:10698" ph="..." />
           </folding>
         </state>
       </provider>
@@ -481,9 +435,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523669797537" expanded="true" signature="10730:10749" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10817:10843" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10879:10911" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10517:10536" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10604:10630" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10666:10698" ph="..." />
           </folding>
         </state>
       </provider>
@@ -506,14 +460,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Untitled-5.php" />
     <entry file="file://$PROJECT_DIR$/Untitled-5.php" />
-    <entry file="file://$PROJECT_DIR$/process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/libraries/add-to-homescreen/src/addtohomescreen.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -556,10 +502,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/action-icon-ios7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/icon-16x16.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="460">
+          <caret line="330" column="83" lean-forward="true" selection-start-line="330" selection-start-column="83" selection-end-line="330" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -579,10 +551,18 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523669797537" expanded="true" signature="10730:10749" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10817:10843" ph="..." />
-            <marker date="1523669797537" expanded="true" signature="10879:10911" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10517:10536" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10604:10630" ph="..." />
+            <marker date="1523672332198" expanded="true" signature="10666:10698" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
