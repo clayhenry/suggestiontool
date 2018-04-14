@@ -30,14 +30,7 @@
 
 
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
 
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-4624777117939870",
-            enable_page_level_ads: true
-        });
-    </script>
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -140,6 +133,11 @@ textarea {
     <div class=form-group>
         <textarea id="field" class="form-control" placeholder="Your Post here..." ></textarea>
     </div>
+    <div class=form-group>
+        <input type="number" id="maxHashtags" name="maxHashtags" class="form-control" placeholder="Number of hashtags? Default is 2" >
+    </div>
+
+
     <div class=form-group style="text-align:center">
         <input type="submit" id="submit" class="btn btn-primary" value="Generate You Post With Hashtags" onclick="submit()" />
     </div>
@@ -159,7 +157,7 @@ textarea {
         <h2>In the last hour...</h2>
     </div>
 <div id="stats">
-    <ul class="list-group"><li class=" list-group-item good "><h3>#change</h3> <strong>Exposure: </strong>  <span class="badge badge-info">105296</span> <strong>Images: </strong> <span class="badge badge-info">0.2105263</span> <strong>Links: </strong> <span class="badge badge-info">0.2105263</span> <strong>Mentions: </strong> <span class="badge badge-info">0.1052632</span> <strong>Retweets: </strong> <span class="badge badge-info">16</span> <strong>Tweets: </strong> <span class="badge badge-info">38</span></li><li class=" list-group-item good "><h3>#wind</h3> <strong>Exposure: </strong>  <span class="badge badge-info">40371</span> <strong>Images: </strong> <span class="badge badge-info">0</span> <strong>Links: </strong> <span class="badge badge-info">0</span> <strong>Mentions: </strong> <span class="badge badge-info">0.137931</span> <strong>Retweets: </strong> <span class="badge badge-info">21</span> <strong>Tweets: </strong> <span class="badge badge-info">29</span></li></ul>
+
 </div>
 
     <div style="text-align: center; padding: 20px;">
@@ -208,7 +206,7 @@ function callApi(tags = ""){
     console.log(recurCount);
 
     $.ajax({
-        url: "process.php",
+        url: "/hashiffy/process.php",
         data: {
             post: field.value,
             tags: tags,
