@@ -30,8 +30,6 @@
 
 
 
-
-
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -329,11 +327,10 @@ function callApi(tags = ""){
     function submit() {
 
 
-        ga('send', {
-            hitType: 'event',
-            eventCategory: 'Generator',
-            eventAction: 'submit',
-            eventLabel: 'version-1'
+        gtag('event', 'click', {
+            event_category: 'Generator',
+            event_label: 'Version-1',
+            value : 'Submit'
         });
 
 
