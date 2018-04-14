@@ -23,7 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01a819aa-eb46-4753-908d-6d85c7086195" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/bower.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/demos/add-event/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/demos/debug/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/demos/detect-homescreen/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/demos/simple/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/demos/stock-android/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/action-icon-android.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/action-icon-ios6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/action-icon-ios7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/icon-152x152.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/icon-16x16.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/icon-196x196.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/imgs/icon.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/src/addtohomescreen.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/src/addtohomescreen.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/libraries/add-to-homescreen/style/addtohomescreen.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/add-to-homescreen" afterPath="" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +66,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -69,9 +87,9 @@
                 <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1523667411989" expanded="true" signature="10374:10393" ph="..." />
-                <marker date="1523667411989" expanded="true" signature="10461:10487" ph="..." />
-                <marker date="1523667411989" expanded="true" signature="10523:10555" ph="..." />
+                <marker date="1523667828533" expanded="true" signature="10408:10427" ph="..." />
+                <marker date="1523667828533" expanded="true" signature="10495:10521" ph="..." />
+                <marker date="1523667828533" expanded="true" signature="10557:10589" ph="..." />
               </folding>
             </state>
           </provider>
@@ -136,17 +154,34 @@
             <path>
               <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
               <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
               <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
               <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="addtohomescreen.js" type="620a8d5e:NestingTreeNode" />
@@ -154,6 +189,8 @@
             <path>
               <item name="hashiffy" type="b2602c69:ProjectViewProjectNode" />
               <item name="hashiffy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="add-to-homescreen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="style" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
@@ -166,6 +203,11 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hashiffy\assets\libraries" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -201,7 +243,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22356000" />
+    <option name="totallyTimeSpent" value="22759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1935" height="1047" extended-state="0" />
@@ -281,9 +323,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523667411989" expanded="true" signature="10374:10393" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10461:10487" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10523:10555" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10408:10427" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10495:10521" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10557:10589" ph="..." />
           </folding>
         </state>
       </provider>
@@ -337,9 +379,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523667411989" expanded="true" signature="10374:10393" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10461:10487" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10523:10555" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10408:10427" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10495:10521" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10557:10589" ph="..." />
           </folding>
         </state>
       </provider>
@@ -375,9 +417,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523667411989" expanded="true" signature="10374:10393" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10461:10487" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10523:10555" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10408:10427" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10495:10521" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10557:10589" ph="..." />
           </folding>
         </state>
       </provider>
@@ -413,9 +455,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523667411989" expanded="true" signature="10374:10393" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10461:10487" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10523:10555" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10408:10427" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10495:10521" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10557:10589" ph="..." />
           </folding>
         </state>
       </provider>
@@ -446,20 +488,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add-to-homescreen/src/addtohomescreen.min.js">
+    <entry file="file://$PROJECT_DIR$/assets/libraries/add-to-homescreen/src/addtohomescreen.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -479,9 +521,9 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523667411989" expanded="true" signature="10374:10393" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10461:10487" ph="..." />
-            <marker date="1523667411989" expanded="true" signature="10523:10555" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10408:10427" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10495:10521" ph="..." />
+            <marker date="1523667828533" expanded="true" signature="10557:10589" ph="..." />
           </folding>
         </state>
       </provider>
