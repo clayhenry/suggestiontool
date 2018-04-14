@@ -191,6 +191,7 @@ textarea {
     var statsdiv = document.getElementById("stats");
     var hiddentext = document.getElementById("hiddentext");
     var loading = document.getElementById("loading");
+    var maxtags = document.getElementById("maxHashtags");
 
 var    recurCount = 0;
 var hastags = "";
@@ -210,7 +211,8 @@ function callApi(tags = ""){
         data: {
             post: field.value,
             tags: tags,
-            url : url
+            url : url,
+            maxHashtags: maxtags.value
         },
         type: "POST",
         dataType : "json",
