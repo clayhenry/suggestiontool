@@ -112,7 +112,15 @@ textarea {
         top: 20%;
         z-index: 99;
     }
-/*ul.list-group li {padding: 30px 50px;}*/
+
+    .stat div {
+        display: grid;
+        min-width: 160px;
+        padding: 0 10px;
+        float: left;
+
+    }
+        /*ul.list-group li {padding: 30px 50px;}*/
 .badge-info {
     background-color: #00438a;
     margin: 5px;
@@ -124,6 +132,17 @@ textarea {
 
 </head>
 <body>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1261751267279285&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container">
     <div style="text-align: center; padding: 20px;">
         <h1>Hashtag My Post</h1>
@@ -158,8 +177,11 @@ textarea {
     </div>
 <div id="stats">
 
-    <ul class="list-group"><li class=" list-group-item good "><h3>#change</h3> <strong>Exposure: </strong>  <span class="badge badge-info">74917</span> <strong>Images: </strong> <span class="badge badge-info">0.2758621</span> <strong>Links: </strong> <span class="badge badge-info">0.2758621</span> <strong>Mentions: </strong> <span class="badge badge-info">0</span> <strong>Retweets: </strong> <span class="badge badge-info">17</span> <strong>Tweets: </strong> <span class="badge badge-info">29</span></li><li class=" list-group-item good "><h3>#destination</h3> <strong>Exposure: </strong>  <span class="badge badge-info">359388</span> <strong>Images: </strong> <span class="badge badge-info">0.16</span> <strong>Links: </strong> <span class="badge badge-info">0.16</span> <strong>Mentions: </strong> <span class="badge badge-info">0</span> <strong>Retweets: </strong> <span class="badge badge-info">4</span> <strong>Tweets: </strong> <span class="badge badge-info">25</span></li></ul>
+<div class="list-group"><div class="stat list-group-item good "><h3>#change</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">74917</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">21</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">29</span></div></div><div class="stat list-group-item good "><h3>#wind</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">2638</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">9</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">12</span></div></div></div>
 </div>
+
+
+    <div class="fb-comments" data-href="http://hashtagmypost.com" data-numposts="5"></div>
 
     <div style="text-align: center; padding: 20px;">
         <h2>What do the colors mean?</h2>
@@ -220,10 +242,10 @@ function callApi(tags = ""){
         success: function(result) {
 
             if(result.hashtags){
-                stats = "<ul class='list-group'>";
+                stats = "<div class='list-group'>";
 
                for(var j = 0; j < result.stats.length; j ++){
-                var calss =" list-group-item ";
+                var calss ="stat list-group-item ";
                    switch(result.stats[j].color){
 
                          case 0:
@@ -246,20 +268,21 @@ function callApi(tags = ""){
 
                    var span = " <span class='badge badge-info'>";
                    if(result.stats[j].hashtag ){
-                       stats +=  "<li class="  + "'" + calss + "'" + " >"
-                           + "<h3>#" + result.stats[j].hashtag + "</h3>"
-                           + " <strong>Exposure: </strong> " + span + result.stats[j].exposure + "</span>"
-                           + " <strong>Images: </strong>" + span + result.stats[j].images  + "</span>"
-                           + " <strong>Links: </strong>" + span + result.stats[j].links + "</span>"
-                           + " <strong>Mentions: </strong>" + span + result.stats[j].mentions  + "</span>"
-                           + " <strong>Retweets: </strong>" + span + result.stats[j].retweets + "</span>"
-                           + " <strong>Tweets: </strong>" + span + result.stats[j].tweets+ "</span>"
+                       stats +=  "<div class="  + "'" + calss + "'" + " >";
+                       stats += "<h3>#" + result.stats[j].hashtag + "</h3>"
+                           + " <div><strong>Exposure: </strong> " + span + result.stats[j].exposure + "</span></div>"
+                           + " <div><strong>Images: </strong>" + span + result.stats[j].images  + "</span></div>"
+                           + " <div><strong>Links: </strong>" + span + result.stats[j].links + "</span></div>"
 
-                           + "</li>"
+                           + " <div><strong>Mentions: </strong>" + span + result.stats[j].mentions  + "</span></div>"
+                           + " <div><strong>Retweets: </strong>" + span + result.stats[j].retweets + "</span></div>"
+                           + " <div><strong>Tweets: </strong>" + span + result.stats[j].tweets+ "</span></div>"
+
+                           + "</div>"
 
                    }
                }
-               stats += "</ul>"
+               stats += "</div>"
                 hastags = "";
                 statsdiv.innerHTML = stats;
 
