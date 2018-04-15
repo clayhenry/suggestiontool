@@ -176,7 +176,6 @@ function callApi(tags = ""){
 
     var url =  ( recurCount == 0 ) ? "https://api.ritekit.com/v1/stats/auto-hashtag" : "https://api.ritekit.com/v1/stats/multiple-hashtags";
 
-    console.log(url);
     console.log(recurCount);
     $.ajax({
         url: "process.php",
