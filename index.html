@@ -12,12 +12,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="assets/libraries/add-to-homescreen/style/addtohomescreen.css">
-    <script src="assets/libraries/add-to-homescreen/src/addtohomescreen.min.js"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-
     <meta name="apple-mobile-web-app-title" content="Hashtag My Post Generator">
 
     <link rel="manifest" href="manifest.json">
@@ -44,89 +43,6 @@
 <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 
 
-<style>
-
-body {
-  font-family: 'Raleway', sans-serif;
-}
-
-h1 {
-
-    font-family: 'Rajdhani', sans-serif;
-    color: #205ea0
-}
-
-.subs {
-
-    font-family: 'Rajdhani', sans-serif;
-    color: #205ea0;
-    font-size: 20px;
-}
-
-h2 {
-    font-family: 'Rajdhani', sans-serif;
-    color: #205ea0;
-    font-size: 24px;
-}
-
-
-
-p {
-
-    font-size: 18px;
-    color: black;
-
-    padding: 5px;
-}
-
-textarea {
-    width:90%;
-    height:100px;
-}
-    .good h3{
-            color: green;
-    }
-
-    .unused h3 {
-
-        color: gray;
-    }
-
-    .great h3{
-        color: orange;
-
-    }
-    .overused h3{
-
-        color: darkred;
-    }
-    .spinner {
-
-
-        display: block;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        top: 20%;
-        z-index: 99;
-    }
-
-    .stat div {
-        display: grid;
-        min-width: 160px;
-        padding: 0 10px;
-        float: left;
-
-    }
-        /*ul.list-group li {padding: 30px 50px;}*/
-.badge-info {
-    background-color: #00438a;
-    margin: 5px;
-    font-size: 85%
-}
-
-
-</style>
 
 </head>
 <body>
@@ -148,7 +64,7 @@ textarea {
         <br><br>
     </div>
     <div class=form-group>
-        <textarea id="field" class="form-control" placeholder="Your Post here..." ></textarea>
+        <textarea id="field" class="form-control" placeholder="Your Post here..." required></textarea>
     </div>
     <div class=form-group>
         <input type="number" id="maxHashtags" name="maxHashtags" class="form-control" placeholder="Number of hashtags? Default is 2" >
@@ -226,7 +142,6 @@ function callApi(tags = ""){
 
     console.log(url);
     console.log(recurCount);
-
     $.ajax({
         url: "process.php",
         data: {
@@ -326,11 +241,10 @@ function callApi(tags = ""){
 
     function submit() {
 
-
         gtag('event', 'click', {
             event_category: 'Generator',
-            event_label: 'Version-1',
-            value : 'Submit'
+            event_label: 'Submit',
+            value : 'Version-1'
         });
 
 
@@ -340,14 +254,25 @@ function callApi(tags = ""){
         "\n" +
         "</div>";
 
-        resultsdiv.innerHTML = spinner
-        stats.innerHTML = "Fetching..."
-          callApi();
 
+        if(field.value.length > 0){
+            resultsdiv.innerHTML = spinner
+            stats.innerHTML = "Fetching..."
+              callApi();
+        } else{
+
+            alert("Your post is empty")
+        }
     }
 
 
     function copyToClipboard(){
+
+        gtag('event', 'click', {
+            event_category: 'Generator',
+            event_label: 'Clipboard'
+        });
+
         hiddentext.select();
         document.execCommand("Copy");
     }

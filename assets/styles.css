@@ -1,0 +1,78 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+
+    font-family: 'Rajdhani', sans-serif;
+    color: #205ea0
+}
+
+.subs {
+
+    font-family: 'Rajdhani', sans-serif;
+    color: #205ea0;
+    font-size: 20px;
+}
+
+h2 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #205ea0;
+    font-size: 24px;
+}
+
+
+
+p {
+
+    font-size: 18px;
+    color: black;
+
+    padding: 5px;
+}
+
+textarea {
+    width:90%;
+    height:100px;
+}
+.good h3{
+    color: green;
+}
+
+.unused h3 {
+
+    color: gray;
+}
+
+.great h3{
+    color: orange;
+
+}
+.overused h3{
+
+    color: darkred;
+}
+.spinner {
+
+
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+    z-index: 99;
+}
+
+.stat div {
+    display: grid;
+    min-width: 160px;
+    padding: 0 10px;
+    float: left;
+
+}
+/*ul.list-group li {padding: 30px 50px;}*/
+.badge-info {
+    background-color: #00438a;
+    margin: 5px;
+    font-size: 85%
+}

@@ -1,6 +1,7 @@
 <?php
-if(!empty($_POST)){
 
+
+if(!empty($_POST)){
 
 $lead_data["post"] = isset($_POST['post']) ? $_POST['post'] : "";
 $lead_data["tags"] = isset($_POST['tags']) ? $_POST['tags'] : "";
