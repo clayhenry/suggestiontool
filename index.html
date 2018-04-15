@@ -24,10 +24,21 @@
     <link rel="shortcut icon" sizes="192x192" href="assets/images/192x192.png">
 
 
+    <!-- Twitter -->
+
+    <script type="text/javascript">// <![CDATA[
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+            js.async=true;
+            js.src="//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js,fjs);
+        }}(document,"script","twitter-wjs");
+    // ]]></script>
+
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117489598-1"></script>
-
-
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -45,19 +56,12 @@
 
 
 </head>
-<body>
+<body onscroll="scrollEvent()">
 
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1261751267279285&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="container">
+
+<div class="container" id="container">
     <div style="text-align: center; padding: 20px;">
         <h1>Hashtag My Post</h1>
         <span class="subs">Get the best, most effective <strong> #hashtags </strong>for your post</span>
@@ -95,7 +99,7 @@
 </div>
 
 
-    <div class="fb-comments" data-href="http://hashtagmypost.com" data-numposts="5"></div>
+
 
     <div style="text-align: center; padding: 20px;">
         <h2>What do the colors mean?</h2>
@@ -107,6 +111,7 @@
         <li> <span style="color:darkred">Red</span> is a tag you want to avoid, it's  <strong><span style="color:darkred">overused</span></strong> in the past hour.</li>
     </ul>
         <br>
+
     <div style="text-align: center; padding: 20px;">
         <h2>Nice, but how are my post hashtags generated?</h2>
     </div>
@@ -118,10 +123,30 @@
     <input type="text" style="position: absolute; top:-50px" id="hiddentext">
 
 
-    <br><br><br>
+    <br>
+
+    <div style="text-align: center; padding: 20px;">
+        <h2>Cool but, What is a hashtag?</h2>
+    </div>
+<p>Simply put, a hashtag is a link that people, like you, can <strong> group posts on social media </strong>(such as Instagram, Twitter, Facebook and Pinterest). </p>
+    <p> This link is automatically created by the platform anytime you append <strong>#</strong> (hash symbol) in front of a keyword. </p>
+    <p>This group is based on common interest the post is based on, for example <strong>#giveaways</strong>. When clicking on this hashtag on Twitter, you will get the latest tweets that relate to giveaways.</p>
+    <p>When you're crafting a post for any social media platform, you want to reach widest and <strong>most relevant audience</strong> that have <strong>common interest </strong>. As hashtags themselves have a followings and trends, it can be tricky creating the most effective tags.</p>
+    <p>You can hashtag any word in your post, what words you tag can effect the engagement of your audience. It can't be too broad, too narrow (unless you're targeting a specific group), or a tag that is overused. </p>
+    <p>Most times, what hashtags you choose in your post will make a substantial difference in how your post will be received and the engagement you get. </p>
+    <br><br>
+
+    <div style="text-align: center; padding: 20px;" id="bottomDiv">
+        <h2>HashtagMyPost is a Free service, feel free to spread the word</h2>
+        <a class="twitter-share-button"
+           href="https://twitter.com/intent/tweet?text=#Hashtag Generator For All Mayor #SocialMedia Platforms - Hashtag My Post"
+           data-size="large" id="twitt_btn">
+            Tweet
+        </a>
+    </div>
 
 
-
+    <br><br>
 <script>
     var field = document.getElementById("field");
     var resultsdiv = document.getElementById("results");
@@ -129,8 +154,10 @@
     var hiddentext = document.getElementById("hiddentext");
     var loading = document.getElementById("loading");
     var maxtags = document.getElementById("maxHashtags");
+    var container = document.getElementById("container");
+    var bottomDiv= document.getElementById("bottomDiv");
 
-var    recurCount = 0;
+var recurCount = 0;
 var hastags = "";
 
 
@@ -206,6 +233,7 @@ function callApi(tags = ""){
             resultsdiv.innerHTML = post;
                 hiddentext.value = post;
 
+                console.log(twitt_btn)
 
 
             var postTags = post.split(" ");
@@ -275,8 +303,28 @@ function callApi(tags = ""){
 
         hiddentext.select();
         document.execCommand("Copy");
+
     }
 
+    var shootEvent =1;
+    function scrollEvent(){
+
+        var currentScroll = window.scrollY + 600;
+        var bottomPossition = bottomDiv.offsetTop;
+
+        if(currentScroll >= bottomPossition){
+
+            if(shootEvent == 1){
+                shootEvent = 0;
+                gtag('event', 'scroll', {
+                    event_category: 'Page',
+                    event_label: 'ScrollToBottom',
+                    value : 'Version-1'
+                });
+            }
+
+        }
+    }
 
     //sw
 

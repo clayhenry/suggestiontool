@@ -65,7 +65,7 @@ textarea {
 
 .stat div {
     display: grid;
-    min-width: 160px;
+    min-width: 140px;
     padding: 0 10px;
     float: left;
 
