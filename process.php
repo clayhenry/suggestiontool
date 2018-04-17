@@ -10,9 +10,9 @@ if(!isset($_SERVER['SERVER_ADDR']) || $_SERVER['SERVER_ADDR'] == "127.0.0.1"){
 }
 else {
 
-    $servername = "127.0.0.1";
+    $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "Osieczna1@";
 }
 
 $dbname = "hashtagmypost";
@@ -29,8 +29,8 @@ if(!empty($_POST)){
 $lead_data["post"] = isset($_POST['post']) ? $_POST['post'] : "";
 $lead_data["tags"] = isset($_POST['tags']) ? $_POST['tags'] : "";
 $lead_data["maxHashtags"] = !empty($_POST['maxHashtags']) ? $_POST['maxHashtags'] : 2;
-$ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
-$refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
+
+
 
 $lead_data["client_id"] = "c4e432c37799f525e8f55d5f31337cc4f3845c508d55";
 $url = $_POST['url'] ."?". http_build_query($lead_data);
@@ -47,10 +47,17 @@ $response = curl_exec ($ch);
 
 curl_close($ch);
 
-//    $stmt = $pdo->prepare("INSERT INTO REGISTRY (name, value) VALUES (:name, :value)");
-//    $stmt->bindParam(':name', $name);
-//    $stmt->bindParam(':value', $value);
-//    $stmt->execute();
+$ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
+$post = filter_var(trim($lead_data["post"], FILTER_SANITIZE_STRING);
+$refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
+$createdOn = date("Y-m-d H:i:s");
+
+    $stmt = $pdo->prepare("INSERT INTO hashtagmypost (ip, post,referral,created_on) VALUES (:ip, :post,:referral,:created_on)");
+    $stmt->bindParam(':ip', $ip);
+    $stmt->bindParam(':post', $post);
+    $stmt->bindParam(':referral', $refferal);
+    $stmt->bindParam(':createdOn ', $createdOn);
+    $stmt->execute();
 
 
 echo $response;
