@@ -53,7 +53,11 @@ function scrollEvent(){
                 event_label: 'ScrollToBottom',
                 value : 'Version-1'
             });
+
+
         }
+
+
 
     }
 }
