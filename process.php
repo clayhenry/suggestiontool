@@ -31,7 +31,6 @@ $lead_data["tags"] = isset($_POST['tags']) ? $_POST['tags'] : "";
 $lead_data["maxHashtags"] = !empty($_POST['maxHashtags']) ? $_POST['maxHashtags'] : 2;
 
 
-
 $lead_data["client_id"] = "c4e432c37799f525e8f55d5f31337cc4f3845c508d55";
 $url = $_POST['url'] ."?". http_build_query($lead_data);
 
@@ -53,8 +52,6 @@ echo $response;
 
 if(isset($responsePost)){
     try {
-
-
 
         $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "";
         $post = filter_var(trim($responsePost, FILTER_SANITIZE_SPECIAL_CHARS));
