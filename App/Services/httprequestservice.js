@@ -86,7 +86,7 @@ function GetGeneratorData (tags){
                 GetGeneratorData(hastags)
 
                 recurCount++;
-                spinnerDiv.innerHTML = ""
+
 
                 setTimeout(scrollToResults(), 3000 )
             }

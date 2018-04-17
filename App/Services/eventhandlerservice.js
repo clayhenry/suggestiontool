@@ -72,6 +72,8 @@ function scrollEvent(type){
 }
 
 function scrollToResults(){
+    spinnerDiv.innerHTML = "";
+
     promoDiv.scrollIntoView({
         behavior: 'smooth', block: 'start'
     });
