@@ -56,7 +56,7 @@ if(isset($responsePost)){
 
 
 
-        $ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
+        $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "";
         $post = filter_var(trim($responsePost, FILTER_SANITIZE_SPECIAL_CHARS));
         $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
         $createdOn = date("Y-m-d H:i:s");
