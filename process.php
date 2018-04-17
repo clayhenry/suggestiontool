@@ -26,7 +26,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if(!empty($_POST)){
 
-$lead_data["post"] = isset($_POST['post']) ? $_POST['post'] : "";
+//$lead_data["post"] = isset($_POST['post']) ? $_POST['post'] : "";
 $lead_data["tags"] = isset($_POST['tags']) ? $_POST['tags'] : "";
 $lead_data["maxHashtags"] = !empty($_POST['maxHashtags']) ? $_POST['maxHashtags'] : 2;
 
