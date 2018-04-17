@@ -37,9 +37,17 @@ function copyToClipboard(){
     document.execCommand("Copy");
 }
 
+function copyOnArticle(){
+    gtag('event', 'click', {
+        event_category: 'Generator',
+        event_label: 'Article'
+    });
+
+}
+
 
 var shootEvent =1;
-function scrollEvent(){
+function scrollEvent(type){
 
     var currentScroll = window.scrollY + 600;
     var bottomPossition = bottomDiv.offsetTop;
@@ -51,7 +59,7 @@ function scrollEvent(){
 
             gtag('event', 'scroll', {
                 event_category: 'Page',
-                event_label: 'ScrollToBottom',
+                event_label: type,
                 value : 'Version-1'
             });
 
