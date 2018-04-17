@@ -52,9 +52,10 @@ echo $response;
 
     try {
 
+        $responsePost =  json_decode($response, true)['post'];
 
         $ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
-        $post = filter_var(trim($lead_data["post"], FILTER_SANITIZE_SPECIAL_CHARS));
+        $post = filter_var(trim($responsePost, FILTER_SANITIZE_SPECIAL_CHARS));
         $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
         $createdOn = date("Y-m-d H:i:s");
 
