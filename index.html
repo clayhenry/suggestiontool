@@ -62,24 +62,18 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 
-    <script src="/App/Services/domdataservice.js"></script>
-    <script src="/App/Services/eventhandlerservice.js"></script>
-    <script src="/App/Services/httprequestservice.js"></script>
+
 
 </head>
 <body>
-
-
-
-
-<div class="container" id="container" onscroll="scrollEvent();">
+<div class="container" id="container">
     <div style="text-align: center; padding: 20px;">
         <h1>Hashtag My Post</h1>
         <span class="subs">Get the best, most effective <strong> #hashtags </strong>for your post</span>
         <br><br>
     </div>
     <div class=form-group>
-        <textarea id="field" class="form-control" placeholder="Your Post here..." required>The best preparation for tomorrow is doing your best today.</textarea>
+        <textarea id="field" class="form-control" placeholder="Your Post here..." required></textarea>
     </div>
     <div class=form-group>
         <input type="number" id="maxHashtags" name="maxHashtags" class="form-control" placeholder="Number of hashtags? Default is 2" >
@@ -178,6 +172,16 @@
 
 </script>
 </div>
+<script src="App/Services/domdataservice.js"></script>
+<script src="App/Services/eventhandlerservice.js"></script>
+<script src="App/Services/httprequestservice.js"></script>
+<script>
+
+    document.addEventListener('scroll', function(){
+        scrollEvent()
+    })
+
+</script>
 
 </body>
 </html>
