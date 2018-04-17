@@ -6,4 +6,5 @@ var loading = document.getElementById("loading");
 var maxtags = document.getElementById("maxHashtags");
 var container = document.getElementById("container");
 var bottomDiv= document.getElementById("bottomDiv");
+var promoDiv = document.getElementById("promo");
 

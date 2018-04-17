@@ -72,7 +72,7 @@ function scrollEvent(type){
 }
 
 function scrollToResults(){
-    resultsdiv.scrollIntoView({
+    promoDiv.scrollIntoView({
         behavior: 'smooth', block: 'start'
     });
 }

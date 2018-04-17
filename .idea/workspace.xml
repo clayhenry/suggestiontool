@@ -24,6 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f6968b42-2835-4279-926b-f1d5367572b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/App/Services/domdataservice.js" afterPath="$PROJECT_DIR$/App/Services/domdataservice.js" />
+      <change beforePath="$PROJECT_DIR$/App/Services/eventhandlerservice.js" afterPath="$PROJECT_DIR$/App/Services/eventhandlerservice.js" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="process.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="226">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="21" />
               <folding>
                 <marker date="1523988935509" expanded="true" signature="1702:1769" ph="INSERT INTO visitors... " />
               </folding>
@@ -50,11 +52,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="95" column="12" lean-forward="false" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+            <state relative-caret-position="418">
+              <caret line="84" column="101" lean-forward="false" selection-start-line="84" selection-start-column="101" selection-end-line="84" selection-end-column="101" />
               <folding>
-                <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +66,8 @@
       <file leaf-file-name="domdataservice.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Services/domdataservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -73,11 +76,11 @@
       <file leaf-file-name="eventhandlerservice.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Services/eventhandlerservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+            <state relative-caret-position="404">
+              <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
               <folding>
-                <marker date="1523991962330" expanded="true" signature="212:231" ph="..." />
-                <marker date="1523991962330" expanded="true" signature="295:321" ph="..." />
+                <marker date="1523993640192" expanded="true" signature="212:231" ph="..." />
+                <marker date="1523993640192" expanded="true" signature="295:321" ph="..." />
               </folding>
             </state>
           </provider>
@@ -116,11 +119,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/App/Services/domdataservice.js" />
         <option value="$PROJECT_DIR$/App/Services/httprequestservice.js" />
         <option value="$PROJECT_DIR$/process.php" />
-        <option value="$PROJECT_DIR$/App/Services/eventhandlerservice.js" />
         <option value="$PROJECT_DIR$/MistakesYouMakingonSocialMedia.html" />
+        <option value="$PROJECT_DIR$/App/Services/domdataservice.js" />
+        <option value="$PROJECT_DIR$/App/Services/eventhandlerservice.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -209,12 +212,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523986012644</updated>
-      <workItem from="1523986013792" duration="5403000" />
+      <workItem from="1523986013792" duration="6872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5403000" />
+    <option name="totallyTimeSpent" value="6872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -252,30 +255,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/Services/domdataservice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Services/httprequestservice.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Services/eventhandlerservice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-          <folding>
-            <marker date="1523991962330" expanded="true" signature="212:231" ph="..." />
-            <marker date="1523991962330" expanded="true" signature="295:321" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -289,21 +273,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="226">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="21" />
           <folding>
             <marker date="1523988935509" expanded="true" signature="1702:1769" ph="INSERT INTO visitors... " />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/Services/eventhandlerservice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+          <folding>
+            <marker date="1523993640192" expanded="true" signature="212:231" ph="..." />
+            <marker date="1523993640192" expanded="true" signature="295:321" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Services/domdataservice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="95" column="12" lean-forward="false" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+        <state relative-caret-position="418">
+          <caret line="84" column="101" lean-forward="false" selection-start-line="84" selection-start-column="101" selection-end-line="84" selection-end-column="101" />
           <folding>
-            <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
