@@ -63,15 +63,14 @@ echo $response;
         $stmt->bindValue(':ip', $ip);
         $stmt->bindValue(':post', $post);
         $stmt->bindValue(':referral', $refferal);
-        $stmt->bindValue(':created_on ', $createdOn);
+        $stmt->bindValue(':created_on', $createdOn);
         $stmt->execute();
 
-        var_dump($stmt);
+
     }
 
     catch (PDOException $e){
-
-        echo $e->getMessage();
+            echo $e->getMessage();
     }
 
 };
