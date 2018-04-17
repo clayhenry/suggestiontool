@@ -6,7 +6,6 @@ function triggerGenerator() {
         value : 'Version-1'
     });
 
-
     var spinner = "<div id=\"spinner\" style=\"text-align: center;\">\n" +
         "<img src=\"animated-loader-gif.gif\"  style=\"width:100px; height:100px;\">\n" +
         "<span style=\"font-weight: bold; color:#007bff\">Generating your hashtag post with some cool additional info ...</span>\n" +
@@ -18,6 +17,8 @@ function triggerGenerator() {
         resultsdiv.innerHTML = spinner
         stats.innerHTML = "Fetching..."
         GetGeneratorData();
+
+
     } else{
 
         alert("Your post is empty")
@@ -60,5 +61,11 @@ function scrollEvent(){
 
 
     }
+}
+
+function scrollToResults(){
+    resultsdiv.scrollIntoView({
+        behavior: 'smooth', block: 'start'
+    });
 }
 

@@ -15,10 +15,6 @@ else {
     $password = "Osieczna1@";
 }
 
-$dbname = "hashtagmypost";
-
-$pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 //$v = $pdo->query("select * from generatorusage")->fetch();
@@ -48,30 +44,36 @@ curl_close($ch);
 
 
 echo $response;
-    $responsePost =  json_decode($response, true)['post'];
-
-if(isset($responsePost)){
-    try {
-
-        $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "";
-        $post = filter_var(trim($responsePost, FILTER_SANITIZE_SPECIAL_CHARS));
-        $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
-        $createdOn = date("Y-m-d H:i:s");
-
-        $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (?,?,?,?)");
-        $stmt->bindValue(1, $ip);
-        $stmt->bindValue(2, $post);
-        $stmt->bindValue(3, $refferal);
-        $stmt->bindValue(4, $createdOn);
-        $stmt->execute();
 
 
+    if($_SERVER['SERVER_ADDR'] != "127.0.0.1") {
+        $responsePost =  json_decode($response, true)['post'];
+        $dbname = "hashtagmypost";
+
+        $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        if (isset($responsePost)) {
+            try {
+
+                $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "";
+                $post = filter_var(trim($responsePost, FILTER_SANITIZE_SPECIAL_CHARS));
+                $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
+                $createdOn = date("Y-m-d H:i:s");
+
+                $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (?,?,?,?)");
+                $stmt->bindValue(1, $ip);
+                $stmt->bindValue(2, $post);
+                $stmt->bindValue(3, $refferal);
+                $stmt->bindValue(4, $createdOn);
+                $stmt->execute();
+
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
     }
-
-    catch (PDOException $e){
-            echo $e->getMessage();
-    }
-}
 };
 
 
