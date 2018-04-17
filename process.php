@@ -47,8 +47,10 @@ $response = curl_exec ($ch);
 
 curl_close($ch);
 
+$post= json_decode($lead_data["post"], true)["post"];
+
 $ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
-$post = filter_var(trim($lead_data["post"], FILTER_SANITIZE_STRING));
+$post = filter_var(trim($post, FILTER_SANITIZE_STRING));
 $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
 $createdOn = date("Y-m-d H:i:s");
 
@@ -57,7 +59,7 @@ try {
     $stmt->bindParam(':ip', $ip);
     $stmt->bindParam(':post', $post);
     $stmt->bindParam(':referral', $refferal);
-    $stmt->bindParam(':createdOn ', $createdOn);
+    $stmt->bindParam(':created_on ', $createdOn);
     $stmt->execute();
 }
 
