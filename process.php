@@ -48,34 +48,35 @@ $response = curl_exec ($ch);
 curl_close($ch);
 
 
-$ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
-$post = "asdkjhasdkjas";
-$refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
-$createdOn = date("Y-m-d H:i:s");
-
-try {
-    $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (:ip,:post,:referral,:created_on)");
-    $stmt->bindValue(':ip', $ip);
-    $stmt->bindValue(':post', $post);
-    $stmt->bindValue(':referral', $refferal);
-    $stmt->bindValue(':created_on ', $createdOn);
-    $stmt->execute();
-}
-
-catch (PDOException $e){
-
-    echo $e->getMessage();
-}
-
-
 echo $response;
+
+
+    try {
+
+
+        $ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
+        $post = "asdkjhasdkjas";
+        $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
+        $createdOn = date("Y-m-d H:i:s");
+
+        $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (:ip,:post,:referral,:created_on)");
+        $stmt->bindValue(':ip', $ip);
+        $stmt->bindValue(':post', $post);
+        $stmt->bindValue(':referral', $refferal);
+        $stmt->bindValue(':created_on ', $createdOn);
+        $stmt->execute();
+
+        var_dump($stmt);
+    }
+
+    catch (PDOException $e){
+
+        echo $e->getMessage();
+    }
+
 };
 
 
-function setVisitorData(){
 
-//
-
-}
 
 ?>
