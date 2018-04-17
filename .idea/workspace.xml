@@ -24,7 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f6968b42-2835-4279-926b-f1d5367572b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/App/Services/httprequestservice.js" afterPath="$PROJECT_DIR$/App/Services/httprequestservice.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="514">
@@ -75,8 +75,8 @@
       <file leaf-file-name="eventhandlerservice.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Services/eventhandlerservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="342">
+              <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding>
                 <marker date="1523993996727" expanded="true" signature="212:231" ph="..." />
                 <marker date="1523993996727" expanded="true" signature="295:321" ph="..." />
@@ -95,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="httprequestservice.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="httprequestservice.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Services/httprequestservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+            <state relative-caret-position="361">
+              <caret line="88" column="40" lean-forward="false" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -118,12 +118,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/App/Services/httprequestservice.js" />
         <option value="$PROJECT_DIR$/process.php" />
         <option value="$PROJECT_DIR$/MistakesYouMakingonSocialMedia.html" />
         <option value="$PROJECT_DIR$/App/Services/eventhandlerservice.js" />
         <option value="$PROJECT_DIR$/App/Services/domdataservice.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/App/Services/httprequestservice.js" />
       </list>
     </option>
   </component>
@@ -211,12 +211,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523986012644</updated>
-      <workItem from="1523986013792" duration="7412000" />
+      <workItem from="1523986013792" duration="8216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7412000" />
+    <option name="totallyTimeSpent" value="8216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -254,14 +254,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/Services/httprequestservice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MistakesYouMakingonSocialMedia.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -276,17 +268,6 @@
           <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="21" />
           <folding>
             <marker date="1523988935509" expanded="true" signature="1702:1769" ph="INSERT INTO visitors... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Services/eventhandlerservice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <marker date="1523993996727" expanded="true" signature="212:231" ph="..." />
-            <marker date="1523993996727" expanded="true" signature="295:321" ph="..." />
           </folding>
         </state>
       </provider>
@@ -309,6 +290,25 @@
             <element signature="n#style#0;n#a#0;n#strong#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Services/eventhandlerservice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <marker date="1523993996727" expanded="true" signature="212:231" ph="..." />
+            <marker date="1523993996727" expanded="true" signature="295:321" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Services/httprequestservice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="88" column="40" lean-forward="false" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
