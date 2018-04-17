@@ -54,7 +54,7 @@ $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
 $createdOn = date("Y-m-d H:i:s");
 
 try {
-    $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (:ip,':post',:referral,:created_on)");
+    $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (:ip,:post,:referral,:created_on)");
     $stmt->bindParam(':ip', $ip);
     $stmt->bindParam(':post', $post);
     $stmt->bindParam(':referral', $refferal);
