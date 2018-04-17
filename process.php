@@ -47,6 +47,10 @@ $response = curl_exec ($ch);
 
 curl_close($ch);
 
+//    $stmt = $pdo->prepare("INSERT INTO REGISTRY (name, value) VALUES (:name, :value)");
+//    $stmt->bindParam(':name', $name);
+//    $stmt->bindParam(':value', $value);
+//    $stmt->execute();
 
 
 echo $response;
