@@ -14,7 +14,7 @@ function triggerGenerator() {
 
 
     if(field.value.length > 0){
-        resultsdiv.innerHTML = spinner
+        spinnerDiv.innerHTML = spinner
         stats.innerHTML = "Fetching..."
         GetGeneratorData();
 
