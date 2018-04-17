@@ -50,20 +50,19 @@ curl_close($ch);
 
 echo $response;
 
-
     try {
 
 
         $ip = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : "";
-        $post = "asdkjhasdkjas";
+        $post = filter_var(trim($lead_data["post"], FILTER_SANITIZE_SPECIAL_CHARS));
         $refferal = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
         $createdOn = date("Y-m-d H:i:s");
 
-        $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (:ip,:post,:referral,:created_on)");
-        $stmt->bindValue(':ip', $ip);
-        $stmt->bindValue(':post', $post);
-        $stmt->bindValue(':referral', $refferal);
-        $stmt->bindValue(':created_on', $createdOn);
+        $stmt = $pdo->prepare("INSERT INTO visitors (ip,post,referral,created_on) VALUES (?,?,?,?)");
+        $stmt->bindValue(1, $ip);
+        $stmt->bindValue(2, $post);
+        $stmt->bindValue(3, $refferal);
+        $stmt->bindValue(4, $createdOn);
         $stmt->execute();
 
 
