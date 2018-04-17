@@ -1,18 +1,54 @@
 
 <!doctype html>
 
-<html lang="en">
+<html amp lang="en">
 
 
 <head>
 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
     <title>Hashtag Generator For All Mayor Social Media Platforms - Hashtag My Post</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link rel="canonical" href="https://hashtagmypost.com/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Hashtag My Post Generator">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" sizes="16x16" href="assets/images/16x16.png">
+    <link rel="shortcut icon" sizes="192x192" href="assets/images/192x192.png">
+
+
+    <!-- Twitter -->
+
+    <script type="text/javascript">// <![CDATA[
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+            js.async=true;
+            js.src="//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js,fjs);
+        }}(document,"script","twitter-wjs");
+    // ]]></script>
+
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117489598-1"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -25,97 +61,31 @@
 
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<style>
-
-body {
-  font-family: 'Raleway', sans-serif;
-}
-
-h1 {
-
-    font-family: 'Rajdhani', sans-serif;
-    color: #205ea0
-}
-
-.subs {
-
-    font-family: 'Rajdhani', sans-serif;
-    color: #205ea0;
-    font-size: 20px;
-}
-
-h2 {
-    font-family: 'Rajdhani', sans-serif;
-    color: #205ea0;
-    font-size: 24px;
-}
 
 
-
-p {
-
-    font-size: 18px;
-    color: black;
-
-    padding: 5px;
-}
-
-textarea {
-    width:90%;
-    height:100px;
-}
-    .good h3{
-            color: green;
-    }
-
-    .unused h3 {
-
-        color: gray;
-    }
-
-    .great h3{
-        color: orange;
-
-    }
-    .overused h3{
-
-        color: darkred;
-    }
-    .spinner {
-
-
-        display: block;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        top: 20%;
-        z-index: 99;
-    }
-ul.list-group li {padding: 30px 50px;}
-.badge-info {
-    background-color: #00438a;
-    margin: 5px;
-    font-size: 85%
-}
-
-
-</style>
 
 </head>
-<body>
-<div class="container">
+<body onscroll="scrollEvent()">
+
+
+
+
+<div class="container" id="container">
     <div style="text-align: center; padding: 20px;">
         <h1>Hashtag My Post</h1>
         <span class="subs">Get the best, most effective <strong> #hashtags </strong>for your post</span>
         <br><br>
     </div>
     <div class=form-group>
-        <textarea id="field" class="form-control" placeholder="Your Post here..." ></textarea>
+        <textarea id="field" class="form-control" placeholder="Your Post here..." required>The best preparation for tomorrow is doing your best today.</textarea>
     </div>
+    <div class=form-group>
+        <input type="number" id="maxHashtags" name="maxHashtags" class="form-control" placeholder="Number of hashtags? Default is 2" >
+    </div>
+
+
     <div class=form-group style="text-align:center">
-        <input type="submit" id="submit" class="btn btn-primary" value="Generate You Post With Hashtags" onclick="submit()" />
+        <input type="submit" id="submit" class="btn btn-primary" value="Generate You Post With Hashtags" onclick="triggerGenerator()" />
     </div>
 
 
@@ -133,9 +103,12 @@ ul.list-group li {padding: 30px 50px;}
         <h2>In the last hour...</h2>
     </div>
 <div id="stats">
-    <ul class="list-group" style="/* text-align: center */"><li class=" list-group-item good "><h3>#thankyou</h3> <strong>Exposure: </strong>  <span class="badge badge-info">120562</span> <strong>Images: </strong> <span class="badge badge-info">0.2151899</span> <strong>Links: </strong> <span class="badge badge-info">0.2151899</span> <strong>Mentions: </strong> <span class="badge badge-info">0.4810127</span> <strong>Retweets: </strong> <span class="badge badge-info">79</span> <strong>Tweets: </strong> <span class="badge badge-info">79</span></li><li class=" list-group-item good "><h3>#change</h3> <strong>Exposure: </strong>  <span class="badge badge-info">166467</span> <strong>Images: </strong> <span class="badge badge-info">0.137931</span> <strong>Links: </strong> <span class="badge badge-info">0.137931</span> <strong>Mentions: </strong> <span class="badge badge-info">0.0689655</span> <strong>Retweets: </strong> <span class="badge badge-info">4</span> <strong>Tweets: </strong> <span class="badge badge-info">58</span></li></ul>
 
+<div class="list-group"><div class="stat list-group-item good "><h3>#change</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">74917</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">21</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">29</span></div></div><div class="stat list-group-item good "><h3>#wind</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">2638</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">9</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">12</span></div></div></div>
 </div>
+
+
+
 
     <div style="text-align: center; padding: 20px;">
         <h2>What do the colors mean?</h2>
@@ -147,6 +120,7 @@ ul.list-group li {padding: 30px 50px;}
         <li> <span style="color:darkred">Red</span> is a tag you want to avoid, it's  <strong><span style="color:darkred">overused</span></strong> in the past hour.</li>
     </ul>
         <br>
+
     <div style="text-align: center; padding: 20px;">
         <h2>Nice, but how are my post hashtags generated?</h2>
     </div>
@@ -158,145 +132,55 @@ ul.list-group li {padding: 30px 50px;}
     <input type="text" style="position: absolute; top:-50px" id="hiddentext">
 
 
-    <br><br><br>
+    <br>
 
+    <div style="text-align: center; padding: 20px;">
+        <h2>Cool but, What is a hashtag?</h2>
+    </div>
+<p>Simply put, a hashtag is a link that people, like you, can <strong> group posts on social media </strong>(such as Instagram, Twitter, Facebook and Pinterest). </p>
+    <p> This link is automatically created by the platform anytime you append <strong>#</strong> (hash symbol) in front of a keyword. </p>
+    <p>This group is based on common interest the post is based on, for example <strong>#giveaways</strong>. When clicking on this hashtag on Twitter, you will get the latest tweets that relate to giveaways.</p>
+    <p>When you're crafting a post for any social media platform, you want to reach widest and <strong>most relevant audience</strong> that have <strong>common interest </strong>. As hashtags themselves have a followings and trends, it can be tricky creating the most effective tags.</p>
+    <p>You can hashtag any word in your post, what words you tag can effect the engagement of your audience. It can't be too broad, too narrow (unless you're targeting a specific group), or a tag that is overused. </p>
+    <p>Most times, what hashtags you choose in your post will make a substantial difference in how your post will be received and the engagement you get. </p>
+    <br><br>
+
+    <div style="text-align: center; padding: 20px;" id="bottomDiv">
+        <h2>HashtagMyPost is a Free service, feel free to spread the word</h2>
+        <a class="twitter-share-button"
+           href="https://twitter.com/intent/tweet?text=#Hashtag Generator For All Mayor #SocialMedia Platforms - Hashtag My Post"
+           data-size="large">
+            Tweet
+        </a>
+    </div>
+
+
+    <br><br>
 <script>
-    var field = document.getElementById("field");
-    var resultsdiv = document.getElementById("results");
-    var statsdiv = document.getElementById("stats");
-    var hiddentext = document.getElementById("hiddentext");
-    var loading = document.getElementById("loading");
-
-var    recurCount = 0;
-var hastags = "";
-
-
-function callApi(tags = ""){
-
-  //  spinner.setAttribute("style", "display:block");
-
-    var url =  ( recurCount == 0 ) ? "https://api.ritekit.com/v1/stats/auto-hashtag" : "https://api.ritekit.com/v1/stats/multiple-hashtags";
-
-    console.log(url);
-    console.log(recurCount);
-
-    $.ajax({
-        url: "process.php",
-        data: {
-            post: field.value,
-            tags: tags,
-            url : url
-        },
-        type: "POST",
-        dataType : "json",
-        success: function(result) {
-
-            if(result.hashtags){
-                stats = "<ul class='list-group'>";
-
-               for(var j = 0; j < result.stats.length; j ++){
-                var calss =" list-group-item ";
-                   switch(result.stats[j].color){
-
-                         case 0: 
-                            calss += "unused " ;
-                            break;
-                        
-                        case 1: 
-                            calss += "overused ";
-                            break;
-                        
-                        case 2: 
-                            calss += "good ";
-                            break;
-
-                        case 3: 
-                            calss += "great ";
-                            break;
- 
-                   }
-
-                   var span = " <span class='badge badge-info'>";
-                   if(result.stats[j].hashtag ){
-                       stats +=  "<li class="  + "'" + calss + "'" + " >"
-                           + "<h3>#" + result.stats[j].hashtag + "</h3>"
-                           + " <strong>Exposure: </strong> " + span + result.stats[j].exposure + "</span>"
-                           + " <strong>Images: </strong>" + span + result.stats[j].images  + "</span>"
-                           + " <strong>Links: </strong>" + span + result.stats[j].links + "</span>"
-                           + " <strong>Mentions: </strong>" + span + result.stats[j].mentions  + "</span>"
-                           + " <strong>Retweets: </strong>" + span + result.stats[j].retweets + "</span>"
-                           + " <strong>Tweets: </strong>" + span + result.stats[j].tweets+ "</span>"
-
-                           + "</li>"
-
-                   }
-               }
-               stats += "</ul>"
-                hastags = "";
-                statsdiv.innerHTML = stats;
-
-            } else {
-
-            var post = result.post;
-
-            resultsdiv.innerHTML = post;
-                hiddentext.value = post;
 
 
 
-            var postTags = post.split(" ");
-                for(var i= 0; i<postTags.length; i++ ){
+    //sw
 
-                        if(postTags[i].indexOf("#") != -1){
-                            hastags +=postTags[i].replace("#", " ").replace(".", "").replace(",","") + ",";
-                        }
-                }
-
-                recurCount++;
-
-
-            }
-            if(recurCount == 1){
-            callApi(hastags)
-                recurCount++;
-
-            }
-
-            if(recurCount > 1){
-                recurCount= 0;
-
-            }
-
-
-
-        }
-    });
-
-
-}
-
-    function submit() {
-
-    var spinner = "<div id=\"spinner\" style=\"text-align: center;\">\n" +
-        "    <img src=\"animated-loader-gif.gif\"  style=\"width:100px; height:100px;\">\n" +
-        "    <span style=\"font-weight: bold; color:#007bff\">Generating your hashtag post with some cool additional info ...</span>\n" +
-        "\n" +
-        "</div>";
-
-        resultsdiv.innerHTML = spinner
-        stats.innerHTML = "Fetching..."
-          callApi();
-
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
     }
-
-
-    function copyToClipboard(){
-        hiddentext.select();
-        document.execCommand("Copy");
-    }
-
 
 </script>
 </div>
+    <script src="/App/Services/domdataservice.js"></script>
+    <script src="/App/Services/eventhandlerservice.js"></script>
+    <script src="/App/Services/httprequestservice.js"></script>
+<script>
+    scrollEvent();
+</script>
 </body>
 </html>
