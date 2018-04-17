@@ -8,7 +8,7 @@ function triggerGenerator() {
 
     var spinner = "<div id=\"spinner\" style=\"text-align: center;\">\n" +
         "<img src=\"animated-loader-gif.gif\"  style=\"width:100px; height:100px;\">\n" +
-        "<span style=\"font-weight: bold; color:#007bff\">Generating your hashtag post with some cool additional info ...</span>\n" +
+
         "\n" +
         "</div>";
 
