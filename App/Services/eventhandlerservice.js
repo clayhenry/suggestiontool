@@ -38,6 +38,8 @@ function copyToClipboard(){
 }
 
 function copyOnArticle(){
+    console.log("article");
+
     gtag('event', 'click', {
         event_category: 'Generator',
         event_label: 'Article'
