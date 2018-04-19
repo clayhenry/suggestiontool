@@ -76,7 +76,7 @@ function scrollEvent(type){
 function scrollToResults(){
     spinnerDiv.innerHTML = "";
 
-    promoDiv.scrollIntoView({
+    statsdiv.scrollIntoView({
         behavior: 'smooth', block: 'start'
     });
 }
