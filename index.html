@@ -5,15 +5,13 @@
 
 
 <head>
-<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
     <title>Hashtag Generator For All Mayor Social Media Platforms - Hashtag My Post</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
 
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
@@ -57,27 +55,19 @@
         gtag('config', 'UA-117489598-1');
     </script>
 
-
-
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
 
 </head>
-<body onscroll="scrollEvent()">
-
-
-
-
+<body>
 <div class="container" id="container">
-    <div style="text-align: center; padding: 20px;">
+    <div class="heading">
         <h1>Hashtag My Post</h1>
         <span class="subs">Get the best, most effective <strong> #hashtags </strong>for your post</span>
         <br><br>
     </div>
     <div class=form-group>
-        <textarea id="field" class="form-control" placeholder="Your Post here..." required>The best preparation for tomorrow is doing your best today.</textarea>
+        <textarea id="field" class="form-control" placeholder="Your Post here..." required></textarea>
     </div>
     <div class=form-group>
         <input type="number" id="maxHashtags" name="maxHashtags" class="form-control" placeholder="Number of hashtags? Default is 2" >
@@ -87,100 +77,113 @@
     <div class=form-group style="text-align:center">
         <input type="submit" id="submit" class="btn btn-primary" value="Generate You Post With Hashtags" onclick="triggerGenerator()" />
     </div>
+    <div id="spinnerDiv"></div>
 
-
-
-
-<div id ="results" class="alert alert-primary" style="font-size:21px; text-align:center">I can't <strong>#change</strong> the direction of the <strong>#wind</strong>, but I can adjust my sails to always reach my destination.</div>
-
+    <div id ="results" class="alert alert-primary" style="font-size:21px; text-align:center">I can't <strong>#change</strong> the direction of the <strong>#wind</strong>, but I can adjust my sails to always reach my destination.</div>
 
     <div style="float: right">
-    <input type="submit" id="cluipboard" class="btn btn-light" value="Copy To Clipboard" onclick="copyToClipboard()" />
+        <input type="submit" id="cluipboard" class="btn btn-light" value="Copy To Clipboard" onclick="copyToClipboard()" />
     </div>
-
-    <div style="clear: both"></div>
-    <div style="text-align: center; padding: 10px;">
-        <h2>In the last hour...</h2>
-    </div>
-<div id="stats">
-
-<div class="list-group"><div class="stat list-group-item good "><h3>#change</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">74917</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">21</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">29</span></div></div><div class="stat list-group-item good "><h3>#wind</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">2638</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">9</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">12</span></div></div></div>
-</div>
+    <div style="float: right">
 
 
+        <div style="clear: both"></div>
+        <br>
+        <div style="text-align: center; padding: 10px;">
+            <h2>In the last hour...</h2>
+        </div>
+        <div id="stats">
+
+            <div class="list-group"><div class="stat list-group-item good "><h3>#change</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">74917</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.2758621</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">21</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">29</span></div></div><div class="stat list-group-item good "><h3>#wind</h3> <div><strong>Exposure: </strong>  <span class="badge badge-info">2638</span></div> <div><strong>Images: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Links: </strong> <span class="badge badge-info">0.3333333</span></div> <div><strong>Mentions: </strong> <span class="badge badge-info">0</span></div> <div><strong>Retweets: </strong> <span class="badge badge-info">9</span></div> <div><strong>Tweets: </strong> <span class="badge badge-info">12</span></div></div></div>
+        </div>
 
 
-    <div style="text-align: center; padding: 20px;">
-        <h2>What do the colors mean?</h2>
-    </div>
-    <ul>
-        <li> <span style="color:green">Green</span> represents a <strong><span style="color:green">good</span></strong> choice for a hashtag. This suggests that in the last hour, this tag was preforming well.</li>
-        <li><span style="color:orange">Orange</span> on the other hand, is a <strong><span style="color:orange">great</span></strong> tag. This one will preform the best.</li>
-        <li> <span style="color:gray">Gray</span>  is an <strong><span style="color:gray">unused</span></strong> tag. You're probably the first one to use it.</li>
-        <li> <span style="color:darkred">Red</span> is a tag you want to avoid, it's  <strong><span style="color:darkred">overused</span></strong> in the past hour.</li>
-    </ul>
+        <div style="text-align: center; padding: 20px;">
+            <h2>What do the colors mean?</h2>
+        </div>
+        <ul>
+            <li> <span style="color:green">Green</span> represents a <strong><span style="color:green">good</span></strong> choice for a hashtag. This suggests that in the last hour, this tag was preforming well.</li>
+            <li><span style="color:orange">Orange</span> on the other hand, is a <strong><span style="color:orange">great</span></strong> tag. This one will preform the best.</li>
+            <li> <span style="color:gray">Gray</span>  is an <strong><span style="color:gray">unused</span></strong> tag. You're probably the first one to use it.</li>
+            <li> <span style="color:darkred">Red</span> is a tag you want to avoid, it's  <strong><span style="color:darkred">overused</span></strong> in the past hour.</li>
+        </ul>
         <br>
 
-    <div style="text-align: center; padding: 20px;">
-        <h2>Nice, but how are my post hashtags generated?</h2>
+        <div style="text-align: center; padding: 20px;">
+            <h2>Nice, but how are my post hashtags generated?</h2>
+        </div>
+
+        <p>We're looking up the <strong>most popular, trending hashtags </strong> that can be generated from your post. We scan each word, compare it to the existing hashtags that will get you the most exposure. </p>
+        <p>At times, we'll concatenate words for a more effective hashtag. In all instances, we try to avoid generic terms that will have no affect on your post.</p>
+        <p>In addition to your hashtagged post, we generate the popularity of the chosen tags based on what's trending in the past hour. Here, you can predict the exposure your post can receive with the generated hashtags.</p>
+        <p>The hourly report trend is based on the top social platforms such as <strong>Facebook</strong>, <strong>Twitter</strong> and <strong>Instagram</strong>.</p>
+        <input type="text" style="position: absolute; top:-50px" id="hiddentext">
+
+
+        <br>
+
+        <div style="text-align: center; padding: 20px;">
+            <h2>Cool but, What is a hashtag?</h2>
+        </div>
+        <p>Simply put, a hashtag is a link that people, like you, can <strong> group posts on social media </strong>(such as Instagram, Twitter, Facebook and Pinterest). </p>
+        <p> This link is automatically created by the platform anytime you append <strong>#</strong> (hash symbol) in front of a keyword. </p>
+        <p>This group is based on common interest the post is based on, for example <strong>#giveaways</strong>. When clicking on this hashtag on Twitter, you will get the latest tweets that relate to giveaways.</p>
+        <p>When you're crafting a post for any social media platform, you want to reach widest and <strong>most relevant audience</strong> that have <strong>common interest </strong>. As hashtags themselves have a followings and trends, it can be tricky creating the most effective tags.</p>
+        <p>You can hashtag any word in your post, what words you tag can effect the engagement of your audience. It can't be too broad, too narrow (unless you're targeting a specific group), or a tag that is overused. </p>
+        <p>Most times, what hashtags you choose in your post will make a substantial difference in how your post will be received and the engagement you get. </p>
+        <br><br>
+
+        <hr>
+        <div style="padding:10px; text-align: center" id="promo">
+            <div style="text-align: center; padding: 20px;">
+                <h2>Before you post...</h2>
+            </div>
+            <strong> Click and read to make sure your posts are up to the standard: <br><br><a style="font-weight: bold;" class="btn btn-success" href="MistakesYouMakingonSocialMedia.html" onclick="copyOnArticle()"> Marketing Mistakes You are Making <br /> on Social Media</a></strong>
+        </div>
+
+        <hr>
+
+        <div style="text-align: center; padding: 20px;" id="bottomDiv">
+            <h2>HashtagMyPost is a Free service, feel free to spread the word</h2>
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet?text=#Hashtag Generator For All Mayor #SocialMedia Platforms - Hashtag My Post"
+               data-size="large">
+                Tweet
+            </a>
+        </div>
+
+
+        <br><br>
+        <script>
+
+            //sw
+
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('sw.js').then(function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }
+
+        </script>
     </div>
 
-    <p>We're looking up the <strong>most popular, trending hashtags </strong> that can be generated from your post. We scan each word, compare it to the existing hashtags that will get you the most exposure. </p>
-    <p>At times, we'll concatenate words for a more effective hashtag. In all instances, we try to avoid generic terms that will have no affect on your post.</p>
-    <p>In addition to your hashtagged post, we generate the popularity of the chosen tags based on what's trending in the past hour. Here, you can predict the exposure your post can receive with the generated hashtags.</p>
-    <p>The hourly report trend is based on the top social platforms such as <strong>Facebook</strong>, <strong>Twitter</strong> and <strong>Instagram</strong>.</p>
-    <input type="text" style="position: absolute; top:-50px" id="hiddentext">
-
-
-    <br>
-
-    <div style="text-align: center; padding: 20px;">
-        <h2>Cool but, What is a hashtag?</h2>
-    </div>
-<p>Simply put, a hashtag is a link that people, like you, can <strong> group posts on social media </strong>(such as Instagram, Twitter, Facebook and Pinterest). </p>
-    <p> This link is automatically created by the platform anytime you append <strong>#</strong> (hash symbol) in front of a keyword. </p>
-    <p>This group is based on common interest the post is based on, for example <strong>#giveaways</strong>. When clicking on this hashtag on Twitter, you will get the latest tweets that relate to giveaways.</p>
-    <p>When you're crafting a post for any social media platform, you want to reach widest and <strong>most relevant audience</strong> that have <strong>common interest </strong>. As hashtags themselves have a followings and trends, it can be tricky creating the most effective tags.</p>
-    <p>You can hashtag any word in your post, what words you tag can effect the engagement of your audience. It can't be too broad, too narrow (unless you're targeting a specific group), or a tag that is overused. </p>
-    <p>Most times, what hashtags you choose in your post will make a substantial difference in how your post will be received and the engagement you get. </p>
-    <br><br>
-
-    <div style="text-align: center; padding: 20px;" id="bottomDiv">
-        <h2>HashtagMyPost is a Free service, feel free to spread the word</h2>
-        <a class="twitter-share-button"
-           href="https://twitter.com/intent/tweet?text=#Hashtag Generator For All Mayor #SocialMedia Platforms - Hashtag My Post"
-           data-size="large">
-            Tweet
-        </a>
-    </div>
-
-
-    <br><br>
-<script>
-
-
-
-    //sw
-
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('sw.js').then(function(registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
-
-</script>
 </div>
-    <script src="/App/Services/domdataservice.js"></script>
-    <script src="/App/Services/eventhandlerservice.js"></script>
-    <script src="/App/Services/httprequestservice.js"></script>
-<script>
-    scrollEvent();
+
+<script src="App/Services/domdataservice.js"></script>
+<script src="App/Services/eventhandlerservice.js"></script>
+<script src="App/Services/httprequestservice.js"></script>
+<script type="text/javascript">
+
+    document.addEventListener('scroll', function(){
+        scrollEvent("ScrollToBottomHome")
+    })
+
 </script>
 </body>
 </html>

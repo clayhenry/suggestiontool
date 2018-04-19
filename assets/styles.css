@@ -76,3 +76,8 @@ textarea {
     margin: 5px;
     font-size: 85%
 }
+
+.heading {
+    text-align: center; padding: 20px;
+
+}

@@ -7,7 +7,7 @@ function GetGeneratorData (tags){
 
     console.log(recurCount);
     $.ajax({
-        url: "/process.php",
+        url: "process.php",
         data: {
             post: field.value,
             tags: tags,
@@ -78,13 +78,17 @@ function GetGeneratorData (tags){
                     }
                 }
 
+
                 recurCount++;
 
             }
             if(recurCount == 1){
                 GetGeneratorData(hastags)
+
                 recurCount++;
 
+
+                setTimeout(scrollToResults(), 3000 )
             }
 
             if(recurCount > 1){
